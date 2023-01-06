@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 12:12:15 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 12:31:25 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:20:08 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	lstprint(t_list *lst)
 	while(tmp)
 	{
 		printf("node -> %2d| value = %3d|\n", node, tmp->data);
-		tmp = tmp->prec;
+		tmp = tmp->prev;
 		node--;
 	}
 }

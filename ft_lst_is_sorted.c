@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel_front.c                                  :+:      :+:    :+:   */
+/*   ft_lst_is_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 12:11:01 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 15:21:51 by chmassa          ###   ########.fr       */
+/*   Created: 2023/01/02 19:48:03 by chmassa           #+#    #+#             */
+/*   Updated: 2023/01/05 16:56:44 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lst.h"
 
-void	ft_lstdel_front(t_list **lst)
+int	ft_lst_is_sorted(t_list **lst)
 {
 	t_list	*tmp;
 
-	if (!(*lst))
-		return ;
 	tmp = *lst;
-	*lst = (*lst)->next;
-	(*lst)->prev = NULL;
-	free(tmp);
+	while (tmp)
+	{
+		if (tmp->next != NULL && tmp->data > tmp->next->data)
+			return (0);
+
+		tmp = tmp->next;
+	}
+	return (1);
 }

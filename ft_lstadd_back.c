@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 17:08:28 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 11:21:08 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:08:16 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	}
 	tmp = ft_lstlast(*lst);
 	tmp->next = new;
-	new->prec = tmp;
+	new->prev = tmp;
 
 }

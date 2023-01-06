@@ -16,6 +16,10 @@ SRCS =  ft_lstadd_back.c \
 		ft_lstprint_from_head.c \
 		ft_lstprint_from_tail.c \
 		lstprint.c \
+		ft_lstcpy.c \
+		ft_lst_is_sorted.c \
+		ft_lstfind_max.c \
+		ft_lstfind_min.c \
 		ft_lstsize.c
 
 			

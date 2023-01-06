@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstnode_value.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 12:11:01 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 15:21:51 by chmassa          ###   ########.fr       */
+/*   Created: 2023/01/06 13:01:48 by chmassa           #+#    #+#             */
+/*   Updated: 2023/01/06 13:21:11 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "push_swap.h"
 
-void	ft_lstdel_front(t_list **lst)
+int	ft_lstnode_value(t_list **lst, int node)
 {
-	t_list	*tmp;
+	int	value;
+	int	position;
 
-	if (!(*lst))
-		return ;
-	tmp = *lst;
-	*lst = (*lst)->next;
-	(*lst)->prev = NULL;
-	free(tmp);
+	position = 1;
+	while (*lst)
+	{
+		if (position == node)
+		{
+			value = (*lst)->data;
+		}
+		*lst = (*lst)->next;
+		position ++;
+	}
+	return (value);
 }

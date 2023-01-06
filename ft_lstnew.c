@@ -6,7 +6,7 @@
 /*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 18:17:54 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 10:36:27 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:21:16 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ t_list	*ft_lstnew(int data)
 	if (new == NULL)
 		return (NULL);
 	new->data = data;
-	new->prec = NULL;
+	new->prev = NULL;
 	new->next = NULL;
 	return (new);
 }

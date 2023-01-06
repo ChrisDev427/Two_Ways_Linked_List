@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 12:14:49 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 14:12:22 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/01/05 15:21:33 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_lstdel_position(t_list **lst, int position)
 		{
 			free(tmp->next);
 			tmp->next = tmp->next->next;
-			tmp->next->prec = tmp;
+			tmp->next->prev = tmp;
 		}
 		tmp = tmp->next;
 		i++;
