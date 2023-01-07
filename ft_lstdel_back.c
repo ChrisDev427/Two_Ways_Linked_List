@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 12:08:22 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 15:22:01 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/01/07 11:20:45 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,22 @@ void	ft_lstdel_back(t_list **lst)
 	if (!(*lst))
 		return ;
 	tmp = *lst;
-	while (tmp)
+	if (tmp->next == NULL)
 	{
-		if (tmp->next->next == NULL)
+		free(tmp);
+		*lst = NULL;
+	}
+	else
+	{
+		while (tmp)
 		{
-			free(tmp->next);
-			tmp->next->prev = NULL;
-			tmp->next = NULL;
+			if (tmp->next->next == NULL)
+			{
+				tmp->next->prev = NULL;
+				tmp->next = NULL;
+				free(tmp->next);
+			}
+			tmp = tmp->next;
 		}
-		tmp = tmp->next;
 	}
 }

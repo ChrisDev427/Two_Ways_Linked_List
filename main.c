@@ -6,7 +6,7 @@
 /*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 11:39:15 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 17:20:42 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/01/07 10:24:41 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ int main(void)
 	lstprint(list);
 
 
-	ft_lstdel_front(&list);
+	ft_lstdel_back(&list);
+	lstprint(list);
+	ft_lstdel_back(&list);
 	lstprint(list);
 	puts("");
 //	ft_lstdel_back(&list);
@@ -48,6 +50,6 @@ int main(void)
 //	puts("");
 //	printf("lst_size = %d\n",  ft_lstsize(list));
 
-//	system("leaks a.out");
+	system("leaks a.out");
 	return (0);
 }
