@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnode_value.c                                       :+:      :+:    :+:   */
+/*   ft_lstnode_value.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 13:01:48 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/06 13:21:11 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/04/25 11:28:42 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "two_ways_linked_list.h"
 
 int	ft_lstnode_value(t_list **lst, int node)
 {
@@ -22,7 +22,7 @@ int	ft_lstnode_value(t_list **lst, int node)
 	{
 		if (position == node)
 		{
-			value = (*lst)->data;
+			value = (*lst)->str;
 		}
 		*lst = (*lst)->next;
 		position ++;

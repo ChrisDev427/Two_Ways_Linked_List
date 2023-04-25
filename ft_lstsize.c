@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
+/*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 18:47:06 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 09:52:59 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/04/25 11:28:14 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "two_ways_linked_list.h"
 
 int	ft_lstsize(t_list *lst)
 {

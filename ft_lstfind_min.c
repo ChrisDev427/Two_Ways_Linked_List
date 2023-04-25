@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstfind_min.c                                    :+:      :+:    :+:   */
+/*   ft_lstfind_min.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 12:08:33 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 16:57:17 by chmassa          ###   ########.fr       */
+/*   Created: 2023/04/20 11:55:31 by axfernan          #+#    #+#             */
+/*   Updated: 2023/04/25 11:28:52 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "two_ways_linked_list.h"
 
 int	ft_lstfind_min(t_list **lst)
 {
@@ -22,12 +22,12 @@ int	ft_lstfind_min(t_list **lst)
 	actual = *lst;
 	i = 1;
 	node = 1;
-	tmp = actual->data;
+	tmp = actual->str;
 	while (actual)
 	{
-		if (actual->next != NULL && actual->next->data < tmp)
+		if (actual->next != NULL && actual->next->str < tmp)
 		{
-			tmp = actual->next->data;
+			tmp = actual->next->str;
 			i++;
 			node = i;
 		}

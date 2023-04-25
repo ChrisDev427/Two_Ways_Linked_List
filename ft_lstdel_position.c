@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdel_position.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 12:14:49 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 15:21:33 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/04/25 11:28:57 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "two_ways_linked_list.h"
 
 void	ft_lstdel_position(t_list **lst, int position)
 {

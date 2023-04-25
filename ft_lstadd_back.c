@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 17:08:28 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 15:08:16 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/04/25 11:29:26 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "two_ways_linked_list.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
@@ -24,5 +24,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	tmp = ft_lstlast(*lst);
 	tmp->next = new;
 	new->prev = tmp;
-
 }

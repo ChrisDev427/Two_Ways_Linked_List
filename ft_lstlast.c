@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 17:20:33 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 10:01:01 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/04/25 11:28:49 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "two_ways_linked_list.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

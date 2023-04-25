@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel_front.c                                  :+:      :+:    :+:   */
+/*   ft_lst_strcmp.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 12:11:01 by chmassa           #+#    #+#             */
-/*   Updated: 2023/04/25 11:29:01 by chmassa          ###   ########.fr       */
+/*   Created: 2023/04/14 10:20:03 by chmassa           #+#    #+#             */
+/*   Updated: 2023/04/25 11:29:35 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "two_ways_linked_list.h"
 
-void	ft_lstdel_front(t_list **lst)
+int	ft_lst_strcmp(t_list *lst, char *s)
 {
-	t_list	*temp;
+	t_list	*tmp;
 
-	if (!(*lst))
-		return ;
-	if ((*lst)->next)
+	if (!lst || !s)
+		return (0);
+	tmp = lst;
+	while (tmp)
 	{
-		temp = (*lst)->next;
-		free((*lst)->str);
-		free((*lst));
-		*lst = temp;
-		(*lst)->prev = NULL;
+		if (ft_strcmp(tmp->str, s) == 0)
+			return (1);
+		tmp = tmp->next;
 	}
-	else
-	{
-		free((*lst)->str);
-		free((*lst));
-		*lst = NULL;
-	}
+	return (0);
 }

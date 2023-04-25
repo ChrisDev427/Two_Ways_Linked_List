@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel_front.c                                  :+:      :+:    :+:   */
+/*   ft_lst_to_char_tab.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 12:11:01 by chmassa           #+#    #+#             */
-/*   Updated: 2023/04/25 11:29:01 by chmassa          ###   ########.fr       */
+/*   Created: 2023/04/12 18:14:32 by chmassa           #+#    #+#             */
+/*   Updated: 2023/04/25 11:29:32 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "two_ways_linked_list.h"
 
-void	ft_lstdel_front(t_list **lst)
+char	**ft_lst_to_char_tab(t_list *lst)
 {
-	t_list	*temp;
+	t_list	*tmp;
+	char	**array;
+	int		i;
 
-	if (!(*lst))
-		return ;
-	if ((*lst)->next)
+	if (!lst)
+		return (NULL);
+	i = 0;
+	tmp = lst;
+	array = malloc(sizeof (char *) * (ft_lstsize(lst) + 1));
+	while (tmp)
 	{
-		temp = (*lst)->next;
-		free((*lst)->str);
-		free((*lst));
-		*lst = temp;
-		(*lst)->prev = NULL;
+		array[i] = ft_strdup(tmp->str);
+		i++;
+		tmp = tmp->next;
 	}
-	else
-	{
-		free((*lst)->str);
-		free((*lst));
-		*lst = NULL;
-	}
+	array[i] = NULL;
+	return (array);
 }

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lst_is_sorted.c                                  :+:      :+:    :+:   */
+/*   lstprint.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
+/*   By: chmassa <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/02 19:48:03 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 16:56:44 by chmassa          ###   ########.fr       */
+/*   Created: 2022/12/23 12:12:15 by chmassa           #+#    #+#             */
+/*   Updated: 2023/01/05 15:20:08 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "two_ways_linked_list.h"
 
-int	ft_lst_is_sorted(t_list **lst)
+void	ft_lstprint(t_list *lst)
 {
 	t_list	*tmp;
 
-	tmp = *lst;
+	if (!lst)
+	{
+		ft_putstr("Empty list\n");
+		return ;
+	}
+	tmp = lst;
 	while (tmp)
 	{
-		if (tmp->next != NULL && tmp->data > tmp->next->data)
-			return (0);
-
+		ft_printf("%s\n", tmp->str);
 		tmp = tmp->next;
 	}
-	return (1);
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chmassa <chrisdev427@gmail.com>            +#+  +:+       +#+        */
+/*   By: chmassa <chmassa@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 18:21:49 by chmassa           #+#    #+#             */
-/*   Updated: 2023/01/05 17:10:03 by chmassa          ###   ########.fr       */
+/*   Updated: 2023/04/25 11:29:22 by chmassa          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lst.h"
+#include "two_ways_linked_list.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
